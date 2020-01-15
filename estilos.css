@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    /* grid-template-columns: auto auto auto auto;
+    grid-template-rows: 100px 100px 100px 100px; */
+    grid-template: 330px 350px 300px / 600px 650px 600px;
+    /* grid-column-gap: 100px; */
+    /* grid-row-gap: 50px; */
+}
+.item{
+    border: 2px teal dashed;
+    display: flex;
+
+}
+.item:nth-child(1){
+    background-color: red;
+    display: grid;
+    grid-template: 50px 50px 50px / 50px 50px 50px;
+    overflow: auto;
+}
