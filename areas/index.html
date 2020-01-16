@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-gap: 20px;
+            grid-template: 100px 1fr 100px/ 300px 1fr;
+            grid-template-areas: "header header"
+                                 "left content"
+                                 "footer footer";
+        }
+        .item{
+            border: 3px teal dashed;
+        }
+        .header{
+            grid-area: header;
+            /* grid-row: span 2; */
+        }
+        .footer{
+            grid-area: footer;
+            /* grid-column: span 2; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">header</div>
+        <div class="item left">left</div>
+        <div class="item content">content</div>
+        <div class="item footer">footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-gap: 20px;
+            grid-template: 1fr 500px 1fr 1fr / repeat(3, 1fr) 300px;
+        }
+        .item{
+            border: 3px teal dashed;
+        }
+        .item:nth-of-type(1){
+                grid-column: 1/-2;
+        }
+        .item:nth-of-type(2){
+                grid-row: 1/ span 3;
+                grid-column-start: 4;
+        }
+        .item:nth-of-type(3){
+                grid-column: 1/2;
+        }
+        .item:nth-of-type(4){
+                grid-column: 2/3;
+        }
+        .item:nth-of-type(5){
+                grid-column: 3/4;
+        }
+        .item:nth-of-type(6){
+                grid-column: 1/4;
+        }
+        .item:nth-of-type(7){
+                grid-column: 1/-1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+    </div>
+</body>
+</html>
